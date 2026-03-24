@@ -1,7 +1,7 @@
 package com.morotti.clientes.controller;
 
 import com.morotti.clientes.entity.ClientesEntity;
-import com.morotti.clientes.service.ClienteService;
+import com.morotti.clientes.service.ClientesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/clientes")
 public class ClientesController {
     @Autowired
-    private ClienteService clienteService;
+    private ClientesService clienteService;
 
     @PostMapping
     public ResponseEntity<ClientesEntity> criarCliente(@RequestBody ClientesEntity entity){
